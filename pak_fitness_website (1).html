@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pak Fitness | Gym & Fitness Equipment Wholesaler in Rawalpindi</title>
+  <meta name="description" content="Pak Fitness is a fitness equipment wholesaler based in Rawalpindi, Pakistan, supplying quality gym and fitness equipment for gyms, fitness centers and home workouts.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              lime: '#22c55e',
+              neon: '#84cc16',
+              dark: '#0a0d0e',
+              panel: '#12181b',
+              border: '#1f292d'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Montserrat', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons & Libraries -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ExerciseGym",
+    "name": "Pak Fitness",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
+    "telephone": "03033333440",
+    "url": "https://myfitnessmall.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Minhas Camp Shopping Centre, Rawal Rd, near PAF Base Nur Khan, Chaklala Cantt",
+      "addressLocality": "Rawalpindi",
+      "postalCode": "46000",
+      "addressCountry": "PK"
+    },
+    "description": "Fitness Equipment Wholesaler & Gym Equipment Supplier in Rawalpindi, Pakistan."
+  }
+  </script>
+
+  <style>
+    body {
+      background-color: #0a0d0e;
+      color: #e2e8f0;
+      overflow-x: hidden;
+    }
+    .glass-nav {
+      background: rgba(10, 13, 14, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card {
+      background: rgba(18, 24, 27, 0.75);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card:hover {
+      border-color: rgba(132, 204, 22, 0.4);
+      box-shadow: 0 10px 30px -10px rgba(132, 204, 22, 0.2);
+    }
+    .text-glow {
+      text-shadow: 0 0 20px rgba(132, 204, 22, 0.5);
+    }
+    /* Hide scrollbar for category tabs */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-lime-500 selection:text-black">
+
+  <!-- NAVIGATION BAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <div class="relative w-11 h-11 rounded-full overflow-hidden border-2 border-lime-500/50 group-hover:border-lime-400 transition-colors shadow-lg shadow-lime-500/20 bg-lime-500/10 flex items-center justify-center">
+            <i data-lucide="dumbbell" class="w-6 h-6 text-lime-400"></i>
+          </div>
+          <div>
+            <span class="font-display font-black text-xl tracking-wider text-white block leading-tight">PAK <span class="text-lime-400">FITNESS</span></span>
+            <span class="text-[9px] tracking-widest text-gray-400 uppercase font-semibold">Wholesale Gym Equipment</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+          <a href="#home" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-lime-400 hover:bg-white/5 transition-all">Home</a>
+          <a href="#products" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-lime-400 hover:bg-white/5 transition-all">Products</a>
+          <a href="#about" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-lime-400 hover:bg-white/5 transition-all">About Us</a>
+          <a href="#why-us" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-lime-400 hover:bg-white/5 transition-all">Why Us</a>
+          <a href="#showcase" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-lime-400 hover:bg-white/5 transition-all">3D Showcase</a>
+          <a href="#reviews" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-lime-400 hover:bg-white/5 transition-all">Reviews</a>
+          <a href="#location" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-lime-400 hover:bg-white/5 transition-all">Location</a>
+          <a href="#contact" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-lime-400 hover:bg-white/5 transition-all">Contact</a>
+        </nav>
+
+        <!-- Right Side WhatsApp Button -->
+        <div class="hidden md:flex items-center">
+          <a href="https://wa.me/923033333440?text=Assalam%20o%20Alaikum,%20I%20am%20interested%20in%20Pak%20Fitness%20gym%20equipment." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-emerald-500 to-lime-500 text-slate-950 font-bold text-sm hover:brightness-110 shadow-lg shadow-emerald-500/20 transition-all hover:scale-105">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+            <span>WhatsApp Us</span>
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 focus:outline-none" aria-label="Toggle Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden glass-nav border-t border-white/10 px-4 pt-4 pb-6 space-y-2">
+      <a href="#home" class="mobile-link block px-4 py-2.5 rounded-lg text-base font-medium text-gray-200 hover:text-lime-400 hover:bg-white/5">Home</a>
+      <a href="#products" class="mobile-link block px-4 py-2.5 rounded-lg text-base font-medium text-gray-200 hover:text-lime-400 hover:bg-white/5">Products</a>
+      <a href="#about" class="mobile-link block px-4 py-2.5 rounded-lg text-base font-medium text-gray-200 hover:text-lime-400 hover:bg-white/5">About Us</a>
+      <a href="#why-us" class="mobile-link block px-4 py-2.5 rounded-lg text-base font-medium text-gray-200 hover:text-lime-400 hover:bg-white/5">Why Pak Fitness</a>
+      <a href="#showcase" class="mobile-link block px-4 py-2.5 rounded-lg text-base font-medium text-gray-200 hover:text-lime-400 hover:bg-white/5">3D Showcase</a>
+      <a href="#reviews" class="mobile-link block px-4 py-2.5 rounded-lg text-base font-medium text-gray-200 hover:text-lime-400 hover:bg-white/5">Reviews</a>
+      <a href="#location" class="mobile-link block px-4 py-2.5 rounded-lg text-base font-medium text-gray-200 hover:text-lime-400 hover:bg-white/5">Location</a>
+      <a href="#contact" class="mobile-link block px-4 py-2.5 rounded-lg text-base font-medium text-gray-200 hover:text-lime-400 hover:bg-white/5">Contact</a>
+      <div class="pt-2">
+        <a href="https://wa.me/923033333440?text=Assalam%20o%20Alaikum,%20I%20am%20interested%20in%20Pak%20Fitness%20gym%20equipment." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-emerald-500 text-slate-950 font-bold text-center">
+          <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION WITH THREE.JS 3D CANVAS -->
+  <section id="home" class="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden">
+    <!-- 3D Canvas Background -->
+    <div id="hero-canvas-container" class="absolute inset-0 z-0"></div>
+    
+    <!-- Gradient Overlays for Depth -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0a0d0e] via-transparent to-[#0a0d0e]/80 pointer-events-none z-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#0a0d0e]/90 via-transparent to-[#0a0d0e]/90 pointer-events-none z-10"></div>
+
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8">
+      
+      <!-- Brand Logo Badge -->
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-card border border-lime-500/30 mb-8 animate-bounce">
+        <div class="w-6 h-6 rounded-full bg-lime-500/20 flex items-center justify-center text-lime-400">
+          <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+        </div>
+        <span class="text-xs sm:text-sm font-semibold tracking-wider text-lime-400 uppercase">#1 Wholesale Gym Equipment Supplier</span>
+      </div>
+
+      <!-- Hero Headline -->
+      <h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight uppercase leading-none mb-6">
+        BUILD YOUR <span class="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 via-emerald-400 to-teal-300 text-glow">GYM.</span><br>
+        BUILD YOUR <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">STRENGTH.</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="max-w-3xl mx-auto text-lg sm:text-xl md:text-2xl text-gray-300 font-light mb-10 leading-relaxed">
+        Premium Commercial & Heavy-Duty Gym Equipment for Fitness Centers, Clubs & Home Gyms Across Pakistan.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+        <a href="#products" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-black text-base uppercase tracking-wider shadow-lg shadow-lime-500/25 transition-all hover:scale-105 flex items-center justify-center gap-2">
+          <span>Explore Equipment</span>
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+        
+        <a href="https://wa.me/923033333440?text=Assalam%20o%20Alaikum,%20I%20am%20interested%20in%20Pak%20Fitness%20gym%20equipment." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-card hover:bg-white/10 text-white font-bold text-base uppercase tracking-wider border border-white/20 transition-all hover:scale-105 flex items-center justify-center gap-3">
+          <i data-lucide="message-circle" class="w-5 h-5 text-emerald-400 fill-current"></i>
+          <span>WhatsApp Us</span>
+        </a>
+      </div>
+
+      <!-- Features Quick Badge -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
+        <div class="glass-card p-4 rounded-xl flex items-center gap-3">
+          <div class="p-2.5 rounded-lg bg-lime-500/10 text-lime-400"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+          <div><p class="text-xs text-gray-400">Quality Standard</p><p class="text-sm font-bold text-white">Commercial Grade</p></div>
+        </div>
+        <div class="glass-card p-4 rounded-xl flex items-center gap-3">
+          <div class="p-2.5 rounded-lg bg-lime-500/10 text-lime-400"><i data-lucide="truck" class="w-6 h-6"></i></div>
+          <div><p class="text-xs text-gray-400">Distribution</p><p class="text-sm font-bold text-white">Nationwide Shipping</p></div>
+        </div>
+        <div class="glass-card p-4 rounded-xl flex items-center gap-3">
+          <div class="p-2.5 rounded-lg bg-lime-500/10 text-lime-400"><i data-lucide="tags" class="w-6 h-6"></i></div>
+          <div><p class="text-xs text-gray-400">Pricing Model</p><p class="text-sm font-bold text-white">Wholesale Direct</p></div>
+        </div>
+        <div class="glass-card p-4 rounded-xl flex items-center gap-3">
+          <div class="p-2.5 rounded-lg bg-lime-500/10 text-lime-400"><i data-lucide="headphones" class="w-6 h-6"></i></div>
+          <div><p class="text-xs text-gray-400">Support</p><p class="text-sm font-bold text-white">Dedicated Help</p></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section id="products" class="py-24 relative bg-brand-dark/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-lime-400 mb-2">Our Wholesale Collection</h2>
+        <p class="font-display text-3xl sm:text-5xl font-extrabold text-white">PREMIUM GYM EQUIPMENT</p>
+        <p class="text-gray-400 mt-4 text-base sm:text-lg">Explore heavy-duty strength, cardio, and workout machinery built for commercial durability and performance.</p>
+      </div>
+
+      <!-- Filter Categories -->
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-4 mb-10 justify-start md:justify-center">
+        <button class="filter-btn active px-5 py-2.5 rounded-full text-sm font-semibold bg-lime-500 text-slate-950 transition-all whitespace-nowrap" data-filter="all">All Equipment</button>
+        <button class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold glass-card text-gray-300 hover:text-white transition-all whitespace-nowrap" data-filter="strength">Strength Equipment</button>
+        <button class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold glass-card text-gray-300 hover:text-white transition-all whitespace-nowrap" data-filter="cardio">Cardio Equipment</button>
+        <button class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold glass-card text-gray-300 hover:text-white transition-all whitespace-nowrap" data-filter="weights">Free Weights</button>
+        <button class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold glass-card text-gray-300 hover:text-white transition-all whitespace-nowrap" data-filter="benches">Gym Benches</button>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+        
+        <!-- Product 1 -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2" data-category="strength">
+          <div class="relative h-64 bg-slate-900/80 overflow-hidden flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Commercial Power Rack" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-lime-500 text-slate-950 uppercase">Strength</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-lime-400 transition-colors">Commercial Heavy-Duty Power Rack</h3>
+            <p class="text-sm text-gray-400 mb-6 leading-relaxed">Industrial steel square tubing construction with integrated pull-up bars, safety spotters, and plate storage pegs.</p>
+            <div class="flex items-center gap-3 pt-2 border-t border-white/10">
+              <button onclick="openInquiryModal('Commercial Heavy-Duty Power Rack')" class="flex-1 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-all">Get Price</button>
+              <a href="https://wa.me/923033333440?text=Assalam%20o%20Alaikum,%20I%20am%20interested%20in%20buying%20Commercial%20Heavy-Duty%20Power%20Rack." target="_blank" class="p-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition-all"><i data-lucide="message-circle" class="w-5 h-5 fill-current"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2" data-category="weights">
+          <div class="relative h-64 bg-slate-900/80 overflow-hidden flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1638805981949-332d16916bc2?auto=format&fit=crop&w=800&q=80" alt="Rubber Hex Dumbbells Set" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-lime-500 text-slate-950 uppercase">Free Weights</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-lime-400 transition-colors">Rubber Encased Hex Dumbbells Set</h3>
+            <p class="text-sm text-gray-400 mb-6 leading-relaxed">Anti-roll hex design with durable virgin rubber casing and chrome contoured ergonomic handles. Available 2.5kg to 50kg.</p>
+            <div class="flex items-center gap-3 pt-2 border-t border-white/10">
+              <button onclick="openInquiryModal('Rubber Encased Hex Dumbbells Set')" class="flex-1 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-all">Get Price</button>
+              <a href="https://wa.me/923033333440?text=Assalam%20o%20Alaikum,%20I%20am%20interested%20in%20buying%20Rubber%20Encased%20Hex%20Dumbbells%20Set." target="_blank" class="p-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition-all"><i data-lucide="message-circle" class="w-5 h-5 fill-current"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2" data-category="cardio">
+          <div class="relative h-64 bg-slate-900/80 overflow-hidden flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1576678927484-cc909957088c?auto=format&fit=crop&w=800&q=80" alt="Commercial Motorized Treadmill" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-lime-500 text-slate-950 uppercase">Cardio</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-lime-400 transition-colors">Commercial AC Motorized Treadmill</h3>
+            <p class="text-sm text-gray-400 mb-6 leading-relaxed">6.0 HP peak AC motor with multi-layer cushioned running deck, LED touch console, and automatic incline controls.</p>
+            <div class="flex items-center gap-3 pt-2 border-t border-white/10">
+              <button onclick="openInquiryModal('Commercial AC Motorized Treadmill')" class="flex-1 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-all">Get Price</button>
+              <a href="https://wa.me/923033333440?text=Assalam%20o%20Alaikum,%20I%20am%20interested%20in%20buying%20Commercial%20AC%20Motorized%20Treadmill." target="_blank" class="p-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition-all"><i data-lucide="message-circle" class="w-5 h-5 fill-current"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2" data-category="benches">
+          <div class="relative h-64 bg-slate-900/80 overflow-hidden flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Adjustable FID Gym Bench" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-lime-500 text-slate-950 uppercase">Gym Benches</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-lime-400 transition-colors">Adjustable FID Commercial Bench</h3>
+            <p class="text-sm text-gray-400 mb-6 leading-relaxed">Flat, Incline, and Decline multi-position bench featuring high-density tear-resistant leather padding and transportation wheels.</p>
+            <div class="flex items-center gap-3 pt-2 border-t border-white/10">
+              <button onclick="openInquiryModal('Adjustable FID Commercial Bench')" class="flex-1 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-all">Get Price</button>
+              <a href="https://wa.me/923033333440?text=Assalam%20o%20Alaikum,%20I%20am%20interested%20in%20buying%20Adjustable%20FID%20Commercial%20Bench." target="_blank" class="p-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition-all"><i data-lucide="message-circle" class="w-5 h-5 fill-current"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2" data-category="strength">
+          <div class="relative h-64 bg-slate-900/80 overflow-hidden flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Dual Cable Crossover Machine" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-lime-500 text-slate-950 uppercase">Strength</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-lime-400 transition-colors">Functional Dual Cable Crossover</h3>
+            <p class="text-sm text-gray-400 mb-6 leading-relaxed">Dual weight stack functional trainer with 180-degree adjustable swivel pulleys and smooth aircraft cable pulley system.</p>
+            <div class="flex items-center gap-3 pt-2 border-t border-white/10">
+              <button onclick="openInquiryModal('Functional Dual Cable Crossover')" class="flex-1 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-all">Get Price</button>
+              <a href="https://wa.me/923033333440?text=Assalam%20o%20Alaikum,%20I%20am%20interested%20in%20buying%20Functional%20Dual%20Cable%20Crossover." target="_blank" class="p-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition-all"><i data-lucide="message-circle" class="w-5 h-5 fill-current"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2" data-category="weights">
+          <div class="relative h-64 bg-slate-900/80 overflow-hidden flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Olympic Barbell & Bumper Plates" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-lime-500 text-slate-950 uppercase">Free Weights</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-lime-400 transition-colors">Olympic Barbell & Color Bumper Plates</h3>
+            <p class="text-sm text-gray-400 mb-6 leading-relaxed">20kg 7ft Hard Chrome Olympic Barbell (1500lbs capacity) paired with low-bounce rubber bumper weight plates.</p>
+            <div class="flex items-center gap-3 pt-2 border-t border-white/10">
+              <button onclick="openInquiryModal('Olympic Barbell & Color Bumper Plates')" class="flex-1 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-all">Get Price</button>
+              <a href="https://wa.me/923033333440?text=Assalam%20o%20Alaikum,%20I%20am%20interested%20in%20buying%20Olympic%20Barbell%20%26%20Bumper%20Plates." target="_blank" class="p-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition-all"><i data-lucide="message-circle" class="w-5 h-5 fill-current"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY PAK FITNESS SECTION -->
+  <section id="why-us" class="py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-lime-400 mb-2">Unmatched Quality & Value</h2>
+        <p class="font-display text-3xl sm:text-5xl font-extrabold text-white">WHY CHOOSE PAK FITNESS?</p>
+      </div>
+
+      <!-- Animated Counters -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div class="glass-card p-8 rounded-2xl text-center border-t-2 border-t-lime-500">
+          <div class="font-display text-4xl sm:text-6xl font-black text-lime-400 mb-2"><span class="counter" data-target="10">0</span>+</div>
+          <p class="text-gray-300 font-semibold text-sm sm:text-base">Years Experience</p>
+        </div>
+        <div class="glass-card p-8 rounded-2xl text-center border-t-2 border-t-lime-500">
+          <div class="font-display text-4xl sm:text-6xl font-black text-lime-400 mb-2"><span class="counter" data-target="500">0</span>+</div>
+          <p class="text-gray-300 font-semibold text-sm sm:text-base">Gyms Equipped</p>
+        </div>
+        <div class="glass-card p-8 rounded-2xl text-center border-t-2 border-t-lime-500">
+          <div class="font-display text-4xl sm:text-6xl font-black text-lime-400 mb-2"><span class="counter" data-target="100">0</span>%</div>
+          <p class="text-gray-300 font-semibold text-sm sm:text-base">Wholesale Rates</p>
+        </div>
+        <div class="glass-card p-8 rounded-2xl text-center border-t-2 border-t-lime-500">
+          <div class="font-display text-4xl sm:text-6xl font-black text-lime-400 mb-2"><span class="counter" data-target="24">0</span>/7</div>
+          <p class="text-gray-300 font-semibold text-sm sm:text-base">Customer Support</p>
+        </div>
+      </div>
+
+      <!-- Features Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-card p-8 rounded-2xl relative group hover:border-lime-500/50 transition-all">
+          <div class="w-14 h-14 rounded-2xl bg-lime-500/10 text-lime-400 flex items-center justify-center mb-6">
+            <i data-lucide="award" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-3">Premium Quality Build</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Built from heavy-gauge industrial steel and long-lasting mechanical components engineered for commercial wear and tear.</p>
+        </div>
+
+        <div class="glass-card p-8 rounded-2xl relative group hover:border-lime-500/50 transition-all">
+          <div class="w-14 h-14 rounded-2xl bg-lime-500/10 text-lime-400 flex items-center justify-center mb-6">
+            <i data-lucide="badge-percent" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-3">Direct Wholesale Pricing</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Eliminate middlemen margins. We offer direct wholesale rates for complete commercial gym setup and bulk orders.</p>
+        </div>
+
+        <div class="glass-card p-8 rounded-2xl relative group hover:border-lime-500/50 transition-all">
+          <div class="w-14 h-14 rounded-2xl bg-lime-500/10 text-lime-400 flex items-center justify-center mb-6">
+            <i data-lucide="shield-check" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-3">Nationwide Distribution</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Fast and safe delivery across Pakistan including Rawalpindi, Islamabad, Lahore, Karachi, Peshawar, and Quetta.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT PAK FITNESS -->
+  <section id="about" class="py-24 relative bg-brand-dark/60 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Visual -->
+        <div class="relative">
+          <div class="relative z-10 rounded-3xl overflow-hidden glass-card p-3">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80" alt="Pak Fitness Gym Setup" class="rounded-2xl w-full h-[400px] sm:h-[500px] object-cover">
+          </div>
+          <!-- Floating Badge -->
+          <div class="absolute -bottom-6 -right-6 z-20 glass-card p-6 rounded-2xl border border-lime-500/40 shadow-2xl hidden sm:flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full overflow-hidden border border-lime-400 bg-lime-500/20 flex items-center justify-center">
+              <i data-lucide="award" class="w-6 h-6 text-lime-400"></i>
+            </div>
+            <div>
+              <p class="text-xs text-gray-400 font-semibold uppercase">Established</p>
+              <p class="font-display font-black text-2xl text-lime-400">SINCE 2015</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-lime-400 mb-2">About Pak Fitness</h2>
+          <p class="font-display text-3xl sm:text-5xl font-extrabold text-white mb-6">RAWALPINDI'S TRUSTED FITNESS SUPPLIER</p>
+          <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-6">
+            "Pak Fitness, established in 2015, is a trusted fitness equipment wholesaler based in Rawalpindi, Pakistan. We provide quality fitness equipment solutions for gyms, fitness centers and home workout spaces."
+          </p>
+          <p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-8">
+            Whether you are opening a commercial health club, setting up an executive corporate gym, or constructing a high-end personal home gym, we deliver heavy-duty machines and free weights directly to your facility.
+          </p>
+
+          <!-- Key Details List -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-white/10 mb-8">
+            <div class="flex items-center gap-3">
+              <i data-lucide="calendar" class="w-5 h-5 text-lime-400"></i>
+              <span class="text-sm font-semibold text-gray-200">Established: 2015</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-lime-400"></i>
+              <span class="text-sm font-semibold text-gray-200">Location: Rawalpindi, PK</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="building" class="w-5 h-5 text-lime-400"></i>
+              <span class="text-sm font-semibold text-gray-200">Business: Wholesale & Retail</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="phone" class="w-5 h-5 text-lime-400"></i>
+              <span class="text-sm font-semibold text-gray-200">Direct Line: 0303 3333440</span>
+            </div>
+          </div>
+
+          <a href="https://wa.me/923033333440?text=Assalam%20o%20Alaikum,%20I%20want%20to%20know%20more%20about%20Pak%20Fitness." target="_blank" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-bold text-sm uppercase tracking-wider transition-all">
+            <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+            <span>Talk With Our Team</span>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3D INTERACTIVE EQUIPMENT SHOWCASE -->
+  <section id="showcase" class="py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-lime-400 mb-2">Interactive Inspector</h2>
+        <p class="font-display text-3xl sm:text-5xl font-extrabold text-white">EXPLORE OUR EQUIPMENT</p>
+        <p class="text-gray-400 mt-4 text-base">Select an equipment category below to view 3D interactive models in real-time.</p>
+      </div>
+
+      <!-- Showcase Controls -->
+      <div class="flex flex-wrap justify-center gap-3 mb-8">
+        <button onclick="switch3DModel('dumbbell', this)" class="model-btn active px-6 py-2.5 rounded-xl text-sm font-semibold glass-card border-lime-500 text-lime-400 hover:text-lime-400 transition-all">Dumbbells</button>
+        <button onclick="switch3DModel('barbell', this)" class="model-btn px-6 py-2.5 rounded-xl text-sm font-semibold glass-card text-gray-300 hover:text-white transition-all">Barbells</button>
+        <button onclick="switch3DModel('rack', this)" class="model-btn px-6 py-2.5 rounded-xl text-sm font-semibold glass-card text-gray-300 hover:text-white transition-all">Power Rack</button>
+        <button onclick="switch3DModel('bench', this)" class="model-btn px-6 py-2.5 rounded-xl text-sm font-semibold glass-card text-gray-300 hover:text-white transition-all">Gym Bench</button>
+      </div>
+
+      <!-- 3D Interactive Viewer Canvas Container -->
+      <div class="relative w-full h-[400px] sm:h-[500px] rounded-3xl glass-card overflow-hidden border border-white/10 cursor-grab active:cursor-grabbing">
+        <div id="inspector-canvas-container" class="w-full h-full"></div>
+        <div class="absolute bottom-6 left-6 z-10 glass-card px-4 py-2 rounded-lg text-xs text-gray-300 flex items-center gap-2 pointer-events-none">
+          <i data-lucide="move-3d" class="w-4 h-4 text-lime-400"></i>
+          <span>Click & Drag to Orbit 3D Model</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REVIEWS SECTION -->
+  <section id="reviews" class="py-24 relative bg-brand-dark/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-lime-400 mb-2">Customer Feedback</h2>
+        <p class="font-display text-3xl sm:text-5xl font-extrabold text-white">REVIEWS & TESTIMONIALS</p>
+        
+        <div class="mt-4 inline-block px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold">
+          Sample Customer Reviews
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Review 1 -->
+        <div class="glass-card p-8 rounded-2xl relative flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-4">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+            <p class="text-gray-300 text-base leading-relaxed mb-6">
+              "Good quality equipment and professional dealing. The overall experience was very smooth."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <div>
+              <p class="font-bold text-white text-sm">Ahmed Khan</p>
+              <p class="text-xs text-gray-400">Rawalpindi</p>
+            </div>
+            <span class="text-[10px] uppercase font-bold text-gray-500">Verified Client</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="glass-card p-8 rounded-2xl relative flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-4">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+            <p class="text-gray-300 text-base leading-relaxed mb-6">
+              "Pak Fitness has a good range of gym equipment. The equipment quality and communication were impressive."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <div>
+              <p class="font-bold text-white text-sm">Usman Ali</p>
+              <p class="text-xs text-gray-400">Islamabad</p>
+            </div>
+            <span class="text-[10px] uppercase font-bold text-gray-500">Verified Client</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="glass-card p-8 rounded-2xl relative flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-4">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+            <p class="text-gray-300 text-base leading-relaxed mb-6">
+              "Good option for gym equipment in Rawalpindi/Islamabad. Would recommend checking their available stock."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <div>
+              <p class="font-bold text-white text-sm">Hamza R.</p>
+              <p class="text-xs text-gray-400">Lahore</p>
+            </div>
+            <span class="text-[10px] uppercase font-bold text-gray-500">Verified Client</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Leave Review CTA -->
+      <div class="mt-12 text-center">
+        <a href="https://wa.me/923033333440?text=Assalam%20o%20Alaikum,%20I%20would%20like%20to%20leave%20a%20review%20for%20Pak%20Fitness." target="_blank" class="inline-flex items-center gap-2 text-lime-400 font-semibold hover:underline">
+          <span>Have you purchased from Pak Fitness? Leave a Review</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GOOGLE MAPS SECTION -->
+  <section id="location" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-lime-400 mb-2">Showroom Location</h2>
+        <p class="font-display text-3xl sm:text-5xl font-extrabold text-white">VISIT PAK FITNESS</p>
+        <p class="text-gray-400 mt-2 text-sm sm:text-base">Visit our physical location in Rawalpindi to inspect equipment in person.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- Address Details Box -->
+        <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-xl bg-lime-500/10 text-lime-400 flex items-center justify-center">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-lg">Main Showroom</h3>
+                <p class="text-xs text-gray-400">Chaklala Cantt, Rawalpindi</p>
+              </div>
+            </div>
+
+            <p class="text-gray-300 text-sm leading-relaxed mb-6">
+              <strong class="text-white block mb-1">Pak Fitness</strong>
+              Minhas Camp Shopping Centre,<br>
+              Rawal Rd, near PAF Base Nur Khan,<br>
+              Chaklala Cantt, Rawalpindi,<br>
+              46000, Pakistan
+            </p>
+
+            <div class="space-y-3 pt-4 border-t border-white/10">
+              <a href="tel:03033333440" class="flex items-center gap-3 text-sm text-gray-300 hover:text-lime-400 transition-colors">
+                <i data-lucide="phone" class="w-4 h-4 text-lime-400"></i>
+                <span>0303 3333440</span>
+              </a>
+              <a href="https://myfitnessmall.com" target="_blank" class="flex items-center gap-3 text-sm text-gray-300 hover:text-lime-400 transition-colors">
+                <i data-lucide="globe" class="w-4 h-4 text-lime-400"></i>
+                <span>myfitnessmall.com</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="pt-8 space-y-3">
+            <a href="https://www.google.com/maps/search/?api=1&query=Minhas+Camp+Shopping+Centre+Rawal+Rd+near+PAF+Base+Nur+Khan+Chaklala+Cantt+Rawalpindi+46000" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-all">
+              <i data-lucide="navigation" class="w-4 h-4"></i>
+              <span>Get Directions</span>
+            </a>
+            <a href="tel:03033333440" class="w-full py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-all">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              <span>Call Now</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Real Google Maps Embed -->
+        <div class="lg:col-span-2 rounded-2xl glass-card overflow-hidden min-h-[400px] border border-white/10">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.846337286691!2d73.0898517!3d33.6092898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfeb3c235db317%3A0x6b4fb71eb527c9a6!2sMinhas%20Camp%20Shopping%20Centre%2C%20Rawal%20Rd%2C%20Chaklala%20Cantt.%2C%20Rawalpindi%2C%20Punjab%2046000!5e0!3m2!1sen!2spk!4v1700000000000!5m2!1sen!2spk" 
+            class="w-full h-full min-h-[400px]" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-24 relative bg-brand-dark/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-4xl mx-auto glass-card p-8 sm:p-12 rounded-3xl relative overflow-hidden border border-lime-500/30">
+        <div class="text-center mb-10">
+          <h2 class="font-display text-3xl sm:text-5xl font-black text-white mb-4">LET'S BUILD YOUR GYM</h2>
+          <p class="text-gray-300 text-base sm:text-lg max-w-xl mx-auto">Get in touch with our team today for wholesale pricing, equipment catalogs, and gym installation quotes.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-xl bg-lime-500/10 text-lime-400"><i data-lucide="building" class="w-6 h-6"></i></div>
+              <div>
+                <p class="text-xs text-gray-400 font-bold uppercase">Business Name</p>
+                <p class="text-lg font-bold text-white">PAK FITNESS</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-xl bg-lime-500/10 text-lime-400"><i data-lucide="map-pin" class="w-6 h-6"></i></div>
+              <div>
+                <p class="text-xs text-gray-400 font-bold uppercase">Address</p>
+                <p class="text-sm text-gray-300">Minhas Camp Shopping Centre, Rawal Rd, near PAF Base Nur Khan, Chaklala Cantt, Rawalpindi, 46000</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-xl bg-lime-500/10 text-lime-400"><i data-lucide="phone" class="w-6 h-6"></i></div>
+              <div>
+                <p class="text-xs text-gray-400 font-bold uppercase">Phone / WhatsApp</p>
+                <p class="text-lg font-bold text-white">0303 3333440</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-xl bg-lime-500/10 text-lime-400"><i data-lucide="globe" class="w-6 h-6"></i></div>
+              <div>
+                <p class="text-xs text-gray-400 font-bold uppercase">Website</p>
+                <p class="text-base font-semibold text-lime-400">myfitnessmall.com</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="space-y-4">
+            <a href="https://wa.me/923033333440?text=Assalam%20o%20Alaikum,%20I%20am%20interested%20in%20Pak%20Fitness%20gym%20equipment." target="_blank" class="flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base uppercase tracking-wider transition-all">
+              <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+              <span>WhatsApp Inquiry</span>
+            </a>
+
+            <a href="tel:03033333440" class="flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-bold text-base uppercase tracking-wider transition-all">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+              <span>Call 0303 3333440</span>
+            </a>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=Minhas+Camp+Shopping+Centre+Rawal+Rd+near+PAF+Base+Nur+Khan+Chaklala+Cantt+Rawalpindi+46000" target="_blank" class="flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-base uppercase tracking-wider transition-all">
+              <i data-lucide="navigation" class="w-5 h-5"></i>
+              <span>Open Directions</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black border-t border-white/10 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Brand Info -->
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-lime-500/20 border border-lime-400 flex items-center justify-center text-lime-400">
+              <i data-lucide="dumbbell" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="font-display font-black text-2xl text-white block">PAK <span class="text-lime-400">FITNESS</span></span>
+              <span class="text-xs text-gray-400 uppercase tracking-widest">Premium Fitness Equipment Solutions</span>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm max-w-md leading-relaxed mb-6">
+            Leading gym equipment wholesaler based in Rawalpindi, Pakistan. Supplying heavy-duty commercial strength machines, cardio equipment, and free weights nationwide.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-bold text-white text-base mb-4 uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="#home" class="hover:text-lime-400 transition-colors">Home</a></li>
+            <li><a href="#products" class="hover:text-lime-400 transition-colors">Products Collection</a></li>
+            <li><a href="#about" class="hover:text-lime-400 transition-colors">About Us</a></li>
+            <li><a href="#reviews" class="hover:text-lime-400 transition-colors">Customer Reviews</a></li>
+            <li><a href="#location" class="hover:text-lime-400 transition-colors">Showroom Location</a></li>
+            <li><a href="#contact" class="hover:text-lime-400 transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="font-bold text-white text-base mb-4 uppercase tracking-wider">Contact Info</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-lime-400"></i><span>0303 3333440</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-lime-400"></i><span>Rawalpindi, Pakistan</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="globe" class="w-4 h-4 text-lime-400"></i><span>myfitnessmall.com</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+        <p>© 2026 Pak Fitness. All Rights Reserved.</p>
+        <p class="text-sm font-semibold text-gray-300">
+          Designed &amp; Developed by <span class="text-lime-400 font-bold">Syed Naveed</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/923033333440?text=Assalam%20o%20Alaikum,%20I%20am%20interested%20in%20Pak%20Fitness%20gym%20equipment." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-5 py-3 rounded-full bg-emerald-500 text-slate-950 font-bold text-sm shadow-2xl shadow-emerald-500/40 hover:scale-110 transition-all group">
+    <i data-lucide="message-circle" class="w-6 h-6 fill-current"></i>
+    <span class="hidden sm:inline">Chat on WhatsApp</span>
+  </a>
+
+  <!-- Inquiry Modal -->
+  <div id="inquiry-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="glass-card max-w-md w-full p-6 sm:p-8 rounded-2xl relative border border-lime-500/40">
+      <button onclick="closeInquiryModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white"><i data-lucide="x" class="w-6 h-6"></i></button>
+      <h3 class="font-display font-bold text-2xl text-white mb-2">Equipment Price Quote</h3>
+      <p class="text-xs text-gray-400 mb-6">Selected Product: <span id="modal-product-name" class="text-lime-400 font-bold"></span></p>
+      <div class="space-y-4">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          For wholesale rates and stock availability, please connect directly with our sales team via WhatsApp or Call.
+        </p>
+        <a id="modal-wa-btn" href="#" target="_blank" class="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-emerald-500 text-slate-950 font-bold text-sm uppercase tracking-wider">
+          <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+          <span>Inquire via WhatsApp</span>
+        </a>
+        <a href="tel:03033333440" class="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-lime-500 text-slate-950 font-bold text-sm uppercase tracking-wider">
+          <i data-lucide="phone" class="w-5 h-5"></i>
+          <span>Call Sales Representative</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Navigation Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Product Filter Logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('active', 'bg-lime-500', 'text-slate-950');
+          b.classList.add('glass-card', 'text-gray-300');
+        });
+        btn.classList.add('active', 'bg-lime-500', 'text-slate-950');
+        btn.classList.remove('glass-card', 'text-gray-300');
+
+        const filter = btn.dataset.filter;
+        productCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Inquiry Modal Logic
+    function openInquiryModal(productName) {
+      document.getElementById('modal-product-name').innerText = productName;
+      const waMsg = encodeURIComponent(`Assalam o Alaikum, I am interested in getting the price quote for ${productName} from Pak Fitness.`);
+      document.getElementById('modal-wa-btn').href = `https://wa.me/923033333440?text=${waMsg}`;
+      document.getElementById('inquiry-modal').classList.remove('hidden');
+      document.getElementById('inquiry-modal').classList.add('flex');
+    }
+
+    function closeInquiryModal() {
+      document.getElementById('inquiry-modal').classList.add('hidden');
+      document.getElementById('inquiry-modal').classList.remove('flex');
+    }
+
+    // Three.js Hero Background Animation
+    function initHeroThreeJS() {
+      const container = document.getElementById('hero-canvas-container');
+      if (!container) return;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+
+      // Create Particle Field
+      const particlesCount = 300;
+      const posArray = new Float32Array(particlesCount * 3);
+      for(let i=0; i<particlesCount*3; i++) {
+        posArray[i] = (Math.random() - 0.5) * 15;
+      }
+      const particlesGeometry = new THREE.BufferGeometry();
+      particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+      
+      const particlesMaterial = new THREE.PointsMaterial({
+        size: 0.05,
+        color: 0x84cc16,
+        transparent: true,
+        opacity: 0.6
+      });
+      const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+      scene.add(particlesMesh);
+
+      // 3D Dumbbell Object
+      const dumbbellGroup = new THREE.Group();
+      
+      // Bar
+      const barGeo = new THREE.CylinderGeometry(0.08, 0.08, 2.2, 16);
+      const barMat = new THREE.MeshStandardMaterial({ color: 0xcccccc, metalness: 0.9, roughness: 0.2 });
+      const bar = new THREE.Mesh(barGeo, barMat);
+      bar.rotation.z = Math.PI / 2;
+      dumbbellGroup.add(bar);
+
+      // Weight Plates
+      const plateGeo = new THREE.CylinderGeometry(0.6, 0.6, 0.25, 32);
+      const plateMat = new THREE.MeshStandardMaterial({ color: 0x18181b, metalness: 0.5, roughness: 0.5 });
+      
+      const leftPlate1 = new THREE.Mesh(plateGeo, plateMat);
+      leftPlate1.rotation.z = Math.PI / 2;
+      leftPlate1.position.x = -0.7;
+      dumbbellGroup.add(leftPlate1);
+
+      const rightPlate1 = new THREE.Mesh(plateGeo, plateMat);
+      rightPlate1.rotation.z = Math.PI / 2;
+      rightPlate1.position.x = 0.7;
+      dumbbellGroup.add(rightPlate1);
+
+      scene.add(dumbbellGroup);
+
+      // Lights
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+      scene.add(ambientLight);
+
+      const pointLight = new THREE.PointLight(0x84cc16, 2);
+      pointLight.position.set(5, 5, 5);
+      scene.add(pointLight);
+
+      camera.position.z = 4;
+
+      function animate() {
+        requestAnimationFrame(animate);
+        dumbbellGroup.rotation.y += 0.008;
+        dumbbellGroup.rotation.x += 0.004;
+        particlesMesh.rotation.y -= 0.001;
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+    }
+
+    // Three.js Inspector Interactive Viewer Animation
+    let inspectorScene, inspectorCamera, inspectorRenderer, current3DMesh;
+    let isDragging = false;
+    let previousMousePosition = { x: 0, y: 0 };
+
+    function initInspectorThreeJS() {
+      const container = document.getElementById('inspector-canvas-container');
+      if (!container) return;
+
+      inspectorScene = new THREE.Scene();
+      inspectorCamera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 0.1, 1000);
+      inspectorRenderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      inspectorRenderer.setSize(container.clientWidth, container.clientHeight);
+      container.appendChild(inspectorRenderer.domElement);
+
+      const light1 = new THREE.DirectionalLight(0xffffff, 1.5);
+      light1.position.set(5, 10, 7);
+      inspectorScene.add(light1);
+
+      const light2 = new THREE.AmbientLight(0xffffff, 0.7);
+      inspectorScene.add(light2);
+
+      inspectorCamera.position.z = 4;
+
+      // Mouse & Touch Drag Controls
+      const domElem = inspectorRenderer.domElement;
+
+      const onMouseDown = (e) => {
+        isDragging = true;
+        previousMousePosition = {
+          x: e.clientX || (e.touches && e.touches[0].clientX),
+          y: e.clientY || (e.touches && e.touches[0].clientY)
+        };
+      };
+
+      const onMouseMove = (e) => {
+        if (!isDragging || !current3DMesh) return;
+        const currentX = e.clientX || (e.touches && e.touches[0].clientX);
+        const currentY = e.clientY || (e.touches && e.touches[0].clientY);
+
+        const deltaX = currentX - previousMousePosition.x;
+        const deltaY = currentY - previousMousePosition.y;
+
+        current3DMesh.rotation.y += deltaX * 0.01;
+        current3DMesh.rotation.x += deltaY * 0.01;
+
+        previousMousePosition = { x: currentX, y: currentY };
+      };
+
+      const onMouseUp = () => { isDragging = false; };
+
+      domElem.addEventListener('mousedown', onMouseDown);
+      domElem.addEventListener('mousemove', onMouseMove);
+      window.addEventListener('mouseup', onMouseUp);
+
+      domElem.addEventListener('touchstart', onMouseDown, { passive: true });
+      domElem.addEventListener('touchmove', onMouseMove, { passive: true });
+      window.addEventListener('touchend', onMouseUp);
+
+      switch3DModel('dumbbell');
+
+      function animate() {
+        requestAnimationFrame(animate);
+        if (current3DMesh && !isDragging) {
+          current3DMesh.rotation.y += 0.005;
+        }
+        inspectorRenderer.render(inspectorScene, inspectorCamera);
+      }
+      animate();
+
+      window.addEventListener('resize', () => {
+        if (!container) return;
+        inspectorCamera.aspect = container.clientWidth / container.clientHeight;
+        inspectorCamera.updateProjectionMatrix();
+        inspectorRenderer.setSize(container.clientWidth, container.clientHeight);
+      });
+    }
+
+    function switch3DModel(type, btnElement) {
+      if (btnElement) {
+        document.querySelectorAll('.model-btn').forEach(btn => {
+          btn.classList.remove('border-lime-500', 'text-lime-400');
+          btn.classList.add('text-gray-300');
+        });
+        btnElement.classList.add('border-lime-500', 'text-lime-400');
+        btnElement.classList.remove('text-gray-300');
+      }
+
+      if (current3DMesh) inspectorScene.remove(current3DMesh);
+
+      const group = new THREE.Group();
+      const metalMat = new THREE.MeshStandardMaterial({ color: 0xcccccc, metalness: 0.9, roughness: 0.2 });
+      const rubberMat = new THREE.MeshStandardMaterial({ color: 0x1f2937, roughness: 0.6 });
+
+      if (type === 'dumbbell') {
+        const bar = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.08, 2, 16), metalMat);
+        bar.rotation.z = Math.PI / 2;
+        group.add(bar);
+
+        const plate1 = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.5, 0.3, 32), rubberMat);
+        plate1.rotation.z = Math.PI / 2;
+        plate1.position.x = -0.6;
+        group.add(plate1);
+
+        const plate2 = plate1.clone();
+        plate2.position.x = 0.6;
+        group.add(plate2);
+      } else if (type === 'barbell') {
+        const bar = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 4, 16), metalMat);
+        bar.rotation.z = Math.PI / 2;
+        group.add(bar);
+
+        const p1 = new THREE.Mesh(new THREE.CylinderGeometry(0.8, 0.8, 0.15, 32), rubberMat);
+        p1.rotation.z = Math.PI / 2;
+        p1.position.x = -1.4;
+        group.add(p1);
+
+        const p2 = p1.clone();
+        p2.position.x = 1.4;
+        group.add(p2);
+      } else if (type === 'rack') {
+        const postGeo = new THREE.BoxGeometry(0.15, 3, 0.15);
+        const post1 = new THREE.Mesh(postGeo, rubberMat);
+        post1.position.set(-1, 0, -1);
+        group.add(post1);
+
+        const post2 = post1.clone();
+        post2.position.set(1, 0, -1);
+        group.add(post2);
+
+        const post3 = post1.clone();
+        post3.position.set(-1, 0, 1);
+        group.add(post3);
+
+        const post4 = post1.clone();
+        post4.position.set(1, 0, 1);
+        group.add(post4);
+      } else if (type === 'bench') {
+        const pad = new THREE.Mesh(new THREE.BoxGeometry(2.2, 0.15, 0.6), rubberMat);
+        group.add(pad);
+
+        const leg1 = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.06, 1, 16), metalMat);
+        leg1.position.set(-0.8, -0.5, 0);
+        group.add(leg1);
+
+        const leg2 = leg1.clone();
+        leg2.position.set(0.8, -0.5, 0);
+        group.add(leg2);
+      }
+
+      current3DMesh = group;
+      inspectorScene.add(current3DMesh);
+    }
+
+    // Number Counter Animation
+    function animateCounters() {
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const speed = target / 50;
+        const updateCount = () => {
+          count += speed;
+          if (count < target) {
+            counter.innerText = Math.ceil(count);
+            setTimeout(updateCount, 30);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      });
+    }
+
+    // Window Load Initializer
+    window.addEventListener('load', () => {
+      initHeroThreeJS();
+      initInspectorThreeJS();
+
+      let counted = false;
+      window.addEventListener('scroll', () => {
+        const whyUsSection = document.getElementById('why-us');
+        if (whyUsSection) {
+          const rect = whyUsSection.getBoundingClientRect();
+          if (rect.top < window.innerHeight && !counted) {
+            animateCounters();
+            counted = true;
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
